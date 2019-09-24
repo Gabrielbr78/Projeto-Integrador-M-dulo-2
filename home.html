@@ -14,12 +14,12 @@
 
 </head>
 
-		<body>
+		<body id="home">
 			<header><!-- inicio Cabecalho -->
 				<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
 				  <div class="container">
 					
-					<a href="index.html" class="navbar-brand">
+					<a href="#home" class="navbar-brand">
 					  <img src="../imagens/logo.png" width="100">
 					</a>
 		  
@@ -30,20 +30,16 @@
 					<div class="collapse navbar-collapse" id="nav-principal">
 					  <ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-						  <a href="" class="nav-link">Quem Somos </a>
+						  <a href="#quemsomos" class="nav-link">Quem Somos </a>
 						</li>
 						<li class="nav-item">
-						  <a href="" class="nav-link">Equipe</a>
+						  <a href="#equipe" class="nav-link">Equipe</a>
 						</li>
 						<li class="nav-item">
-						  <a href="" class="nav-link">Nossos Clientes</a>
+						  <a href="#servicos" class="nav-link">Serviços</a>
 						</li>
 						<li class="nav-item">
 						  <a href="" class="nav-link">Fale Conosco</a>
-						</li>
-						<li class="nav-item divisor"></li>
-						<li class="nav-item">
-						  <a href="" class="nav-link">Área do Admin</a>
 						</li>
 					  </ul>
 					</div>
@@ -58,11 +54,13 @@
 				</div>
 			</div>
 
-			<div class="conteudo">
-				<h3>sdfsdfsdf</h3>
-				<p>sdfsdfsdf</p>
-
-				<p>sdfsdfsdf</p>
+			<div class="conteudo container-fluid" id="quemsomos">
+					<div class="jumbotron jumbotron-fluid border border-dark rounded-lg" style="background-color:white">
+							<div class="container">
+								<h1 class="display-4" id="tituloquemsomos">Quem somos</h1>
+								<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+							</div>
+						</div>
 			</div>
 
 			<div class="caixa2" id="pegandoestrada">
@@ -71,70 +69,72 @@
 				</div>
 			</div>
 
-			<div class="conteudo bg-transparent text-dark">
+		
+			<div class="conteudo bg-transparent text-dark" id="equipe">
 				<section class="equipe">
 					<h2>Equipe</h2>
-					<div class="container equipe-container">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="equipe-single">
-									<div class="row">
-										<div class="col-md-2">
-											<div class="user-picture">
-											  <div class="user-picture-child"></div>
-											</div>
-										</div>
-										<div class="col-md-10">
-											<h3>João Batata</h3>
-											<p>suscipit neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis orci quam. Phasellus dictum erat at nibh bibendum, eget porta urna pretium. Maecenas vel augue massa. Nulla facilisi. Nulla a suscipit quam, eu pharetra justo</p>
-										</div>
-									</div>
-								</div>
-							</div>
-	  
-							<div class="col-md-4">
-								<div class="equipe-single">
-									<div class="row">
-										<div class="col-md-2">
-											<div class="user-picture">
-											  <div class="user-picture-child"></div>
-											</div>
-										</div>
-										<div class="col-md-10">
-											<h3>João Batata</h3>
-											<p>suscipit neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis orci quam. Phasellus dictum erat at nibh bibendum, eget porta urna pretium. Maecenas vel augue massa. Nulla facilisi. Nulla a suscipit quam, eu pharetra justo</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="equipe-single">
-									<div class="row">
-										<div class="col-md-2">
-											<div class="user-picture">
-											  <div class="user-picture-child"></div>
-											</div>
-										</div>
-										<div class="col-md-10">
-											<h3>João Batata</h3>
-											<p>suscipit neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis orci quam. Phasellus dictum erat at nibh bibendum, eget porta urna pretium. Maecenas vel augue massa. Nulla facilisi. Nulla a suscipit quam, eu pharetra justo</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div><!--equipe-container-->
-				  </section>
+				</section>
 			</div>
+
+			<!-- Grupo de cards -->
+			<div class="card-group col-md-12 ">
+
+				<!-- Primeiro Card -->
+					<div class="card row col-md-4 border-dark">
+						<header class="col-md-4">
+								<img src="../imagens/fotoexemplo.png" class="img-fluid p-3" alt="Responsive image">
+						</header>
+						<article class="col-md-8">
+								<div class="card-body">
+										<p class="card-title">Fábio Lins</p>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>	
+									</div>
+						</article>
+					</div>
+
+					<!-- Segundo Card -->
+					<div class="card row col-md-4 h-150 border-dark">
+							<header class="col-md-4">
+									<img src="../imagens/fotoexemplo.png" class="img-fluid p-3" alt="Responsive image">
+							</header>
+							<article class="col-md-8">
+									<div class="card-body">
+											<h4 class="card-title">Lucas Anthony</h4>
+											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>	
+										</div>
+							</article>
+					</div>
+
+					<!-- Terceiro Card -->
+					<div class="card row col-md-4 h-150 border-dark">
+						<header class="col-md-4">
+								<img src="../imagens/fotoexemplo.png" class="img-fluid p-3" alt="Responsive image">
+						</header>
+						<article class="col-md-8">
+								<div class="card-body">
+										<h4 class="card-title">Gabriel Brandão</h4>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>	
+									</div>
+						</article>
+					</div>
+				</div>
 
 			<div class="caixa3">
 				<div class="conteudo-titulo">
 					<span class="titulo">Pôr do sol</span>
 				</div>
 			</div>
-			<div class="conteudo bg-transparent text-dark">
-				asdasdasdasd
+
+			
+				<div class="conteudo container-fluid" id="servicos" >
+					<div class="jumbotron jumbotron-fluid border border-dark rounded-lg"  style="background-color:white">
+							<div class="container">
+								<h1 class="display-4" id="tituloquemsomos">Serviços</h1>
+								<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+							</div>
+						</div>
 			</div>
+			
 			<div class="caixa4">
 				<div class="conteudo-titulo">
 					<span class="titulo" id="montanhas">Montanhas</span>
@@ -152,6 +152,7 @@
 						<li><a href="">Sobre</a></li>
 						<li><a href="">Empregos</a></li>
 						<li><a href="">Novidades</a></li>
+						<li><a href="">Área Admin</a></li>
 					  </ul>
 					</div>
 					<div class="col-md-2">

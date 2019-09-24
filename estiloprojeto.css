@@ -221,3 +221,31 @@
 			background-color:#ccc;
 		}
 
+		.card-group{
+			margin-left: 30px;
+			margin-bottom: 30px;
+		}
+
+		.card{
+			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+		}
+
+		.equipe{
+			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+			margin-bottom: 0px;
+		}
+
+		.card-title{
+			font-size: 30px;
+		}
+
+		#tituloquemsomos{
+			color: #000;
+			text-align: center;
+		}
+		
+		.jumbotron{
+			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+		}
+
+		
