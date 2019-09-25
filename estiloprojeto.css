@@ -26,7 +26,7 @@
 
 		/* Efeito Parallax
 		-------------------------------*/
-		.caixa1, .caixa2, .caixa3, .caixa4 {
+		.caixa1, .caixa2, .caixa3, .caixa4, .caixa5 {
 			position: relative;
 			height: 100%;
 			background-repeat: no-repeat;
@@ -50,6 +50,9 @@
 		.caixa4 {
 			background-image: url(../imagens/imagem4.jpg);
 		}
+		.caixa5 {
+			background-image: url(../imagens/imagem4.jpg);
+		}
 
 		.conteudo-titulo {
 			position: absolute;
@@ -61,9 +64,9 @@
 
 		.conteudo-titulo span.titulo {
 			color: #fff;
-			background-color: #000;
+			background-color:transparent;
 			padding: 18px;
-			font-size: 25px;
+			font-size: 40px;
 			letter-spacing: 5px;
 			text-transform: uppercase;
 		}
@@ -144,6 +147,7 @@
 			font-size: 2em;
 			font-weight: 700;
 			letter-spacing: -0.04em;
+			text-align: justify;
 		}
 
 
@@ -203,49 +207,30 @@
 			color: white; 
 		}
 
-		.user-picture{
-			width: 100%;
-			padding-top: 100%;
-			position: relative;
-			left: 50%;
-			transform: translate(-50%,0%);
+		
+
+		/* Estrutura conteúdos
+		-----------------------------*/
+		.caixa {
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 
-		.user-picture-child{
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			border-radius: 50%;
-			height: 100%;
-			background-color:#ccc;
-		}
-
-		.card-group{
-			margin-left: 30px;
-			margin-bottom: 30px;
-		}
-
-		.card{
-			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
-		}
-
-		.equipe{
-			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
-			margin-bottom: 0px;
-		}
-
-		.card-title{
-			font-size: 30px;
-		}
-
-		#tituloquemsomos{
+		#servicos {
+			background: white;
 			color: #000;
-			text-align: center;
 		}
-		
-		.jumbotron{
-			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+		#quemsomos{
+			color: #000;
+			font-size: 20px;
 		}
 
-		
+		#servicos h2{
+			color: #000;
+		}
+
+		.albuns {
+			padding: 10px 0;
+		}
+
+	
