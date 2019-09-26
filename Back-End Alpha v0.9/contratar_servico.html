@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contratar Serviço</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</head>
+        <body>
+            <div class="main" style="border:outset; display: inline-block; text-align: center">
+                <h2>Contratar Serviço</h2>
+                <form action="contratar_servico.php" method="post">
+                    <div class="tipopessoa">
+                        <label for="pessoafisica">Pessoa Física</label>
+                        <input type="radio" name="tipopessoa" id="pessoafisica" value="Pessoa Física"  required="true">
+
+                        <label for="pessoajuridica">Pessoa Jurídica</label>
+                        <input type="radio" name="tipopessoa" id="pessoajuridica" value="Pessoa Jurídica"  required="true"><br><br>
+                    </div>    
+                    
+                    <label for="identificacao" id="identificacao">Nome:</label>
+                    <input type="text" name="identificacao" required="true"><br><br>
+
+                    <label for="registro" id="label_registro">CPF/CNPJ:</label>
+                    <input type="text" name="registro" id="campo_registro" required="true"><br><br>
+
+                    <label for="telefone">Telefone de Contato:</label>
+                    <input type="text" name="telefone" onkeypress="$(this).mask('(00)00000-0000');" required="true"><br><br>
+
+                    <label for="nome_contato">Nome do Contato:</label>
+                    <input type="text" name="nome_contato" required="true"><br><br>
+
+                    <label for="email">Email de Contato:</label>
+                    <input type="email" name="email" required="true"><br><br>
+
+                    <label for="servico">Serviço:</label>
+                    <select name="servico" required="true">
+                        <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                        <option value="Gerenciamento de Projeto">Gerenciamento de Projeto</option>
+                        <option value="Desenvolvimento de Software">Desenvolvimento de Software</option>
+                        <option value="Integração de Sistemas">Integração de Sistemas</option>
+                        <option value="Banco de Dados">Banco de Dados</option>
+                    </select><br><br>
+
+                    <label for="descricao">Descrição do Serviço:</label>
+                    <textarea name="descricao" cols="30" rows="10" style="resize: none;" required="true" maxlength="500"></textarea><br><br>
+
+                    <input type="submit" value="Contratar">
+                    <input type="reset" value="Limpar">
+                </form>
+            </div>
+        </body>
+</html>

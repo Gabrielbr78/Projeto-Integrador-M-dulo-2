@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Consultar Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</head>
+        <body>
+            <h2>Cunsultar Clientes</h2>
+
+            <form action="consultarcliente.php" method="post">
+                <label for="nomecliente">Buscar pelo nome:</label>
+                <input type="text" name="nomecliente"><br><br>
+
+                <label for="cpfcliente">Buscar pelo CPF:</label>
+                <input type="text" name="cpfcliente" onkeypress="$(this).mask('000.000.000-00');"><br><br>
+                
+                <input type="submit" name="buscarnome" value="Buscar pelo nome">
+                <input type="submit" name="buscarcpf" value="Buscar pelo cpf">
+            </form>
+        </body>
+</html>
