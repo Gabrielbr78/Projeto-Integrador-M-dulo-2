@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contratar Serviço</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/estiloprojeto.css" type="text/css">
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+
+    <script>
+        function exibeMsg(valor)
+        {
+
+            switch (valor)
+            {
+                case '1':
+                document.getElementById( 'label_registro' ).innerHTML = 'CPF:';
+                document.getElementById( 'campo_registro' ).placeholder = "000.000.000-00";
+                document.getElementById( 'identificacao' ).innerHTML = 'Nome:';
+                break;
+
+                case '2':
+                document.getElementById( 'label_registro' ).innerHTML = 'CNPJ:';
+                document.getElementById( 'campo_registro' ).placeholder = "00.000.000/0000-00";
+                document.getElementById( 'identificacao' ).innerHTML = 'Empresa:';
+                break;
+
+ 
+
+                default:
+                document.getElementById( 'label_registro' ).innerHTML = 'Selecione se você esta cadastrando sua empresa pelo CNPJ ou CPF, ela será usada para fazer login no site';
+                break;
+            }
+        }
+    </script>
+		
+
+</head>
+
+		<body id="home">
+			<header><!-- inicio Cabecalho -->
+				<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+				  <div class="container">
+					
+					<a href="#home" class="navbar-brand">
+					  <img src="../imagens/logo.png" width="100" class="animated fadeInDown">
+					</a>
+		  
+					
+				  </div>
+				</nav>
+			  </header><!--/fim Cabecalho -->
+			
+            <div class="caixa1"><!--imagem grande 1-->
+                
+				<div class="conteudo-titulo container-fluid row justify-content-center">
+                    
+						<form id="formulario row" class="animated fadeInLeft" action="contratar_serviço.php" method="POST">
+                            <h3 class="text-center" style="color: white;">Contratar Serviço</h3>
+                            <div class="form-group tipopessoa">
+                              <label for="pessoafisica" style="color: white;">Pessoa Física</label>
+                              <input type="radio" class="form-control" id="pessoafisica" name="tipopessoa" value="1" onchange="exibeMsg(this.value);">
+                              
+                            </div>
+            
+                            <div class="form-group tipopessoa">
+                              <label for="pessoajuridica" style="color: white;">Pessoa Jurídica</label>
+                              <input type="radio" class="form-control" id="pessoajuridica" name="tipopessoa" value="2" onchange="exibeMsg(this.value);">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="identificacao" id="identificacao" style="color: white;">Nome</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="empresa" placeholder="Insira seu nome">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registro" id="label_registro" style="color: white;">CPF</label>
+                                <input type="text" class="form-control" id="campo_registro" aria-describedby="emailHelp" name="registro" placeholder="Insira seu nome">
+                            </div>
+                            
+                            <a class="btn btn-dark" href="loginarearestrita.html" role="button">Voltar</a>
+							<button type="reset" class="btn btn-dark" id="entrar">Limpar</button>
+                            <button type="submit" class="btn btn-dark" id="entrar">Contratar</button>
+                        </form>
+				</div>
+			</div><!--fim imagem grande 1-->
+
+			
+				<!--Bootstrap JavaScript-->
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+				<!--=========================================================================================================-->
+		</body>
+</html>
