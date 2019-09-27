@@ -173,6 +173,12 @@
 			padding:10px 2%;
 			background: #000;
 			color: white; 
+			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+			margin-bottom: 10px;
+		}
+		.textodescricao{
+			font-size: 16px;
+			
 		}
 
 		
@@ -187,6 +193,7 @@
 		#servicos {
 			background: white;
 			color: #000;
+			
 		}
 		#quemsomos{
 			color: #000;
@@ -195,13 +202,30 @@
 
 		#servicos h2{
 			color: #000;
+			
+		}
+		.btn-dark{ /*botao do nossos serviços*/
+			
+			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+			font-size: 20px;	
+		}/*botao do nossos serviços*/
+		
+		.col-lg-4{
+			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+			border: 1px ridge;
+			color: #000;
+			font-size: 18px;
+			
 		}
 
 		.albuns {
 			padding: 10px 0;
 		}
-		.trabalheconosco {
+		#trabalheconosco {
 			background: white;
+			color: #000;
+		}
+		label{
 			color: #000;
 		}
 		/* Rodapé
@@ -236,15 +260,13 @@
 			float: right;
 			margin: 0 5px;
 		}
-		.bg-light{
-			display: inline-block;
+		
+		.img-fluid{
 			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
-			border: outset;
-
 		}
-		.botaoservicos{
-			color: #fff;
+
+		.form-control{
+			box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
 			
 		}
-
 	

@@ -16,19 +16,19 @@
 
 		<body id="home">
 			<header><!-- inicio Cabecalho -->
-				<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+				<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente ">
 				  <div class="container">
 					
 					<a href="#home" class="navbar-brand">
-					  <img src="../imagens/logo.png" width="100">
+					  <img class="animated fadeInLeft" src="../imagens/logo.png" width="100">
 					</a>
 		  
-					<button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+					<button class="navbar-toggler " data-toggle="collapse" data-target="#nav-principal">
 					  <i class="fas fa-bars text-white"></i>
 					</button>
 		  
 					<div class="collapse navbar-collapse" id="nav-principal">
-					  <ul class="navbar-nav ml-auto">
+					  <ul class="navbar-nav ml-auto animated fadeInLeft">
 						<li class="nav-item">
 						  <a href="#quemsomos" class="nav-link">Quem Somos </a>
 						</li>
@@ -50,7 +50,7 @@
 			
 			<div class="caixa1"><!--imagem grande 1-->
 				<div class="conteudo-titulo">
-						<span class="titulo" >Crie Seu Mundo</span>
+						<span class="titulo animated fadeIn delay-1s" >Crie Seu Mundo</span>
 				</div>
 			</div><!--fim imagem grande 1-->
 
@@ -113,8 +113,36 @@
 			<div class="conteudo bg-transparent text-dark" id="equipe"><!--equipe-->
 				<section class="equipe">
 					<h2>Equipe</h2>
-				</section>
-			</div><!--fim equipe-->
+					</section>
+					<div class="row">
+						<div class="col-lg-4">
+						  <img class="rounded-circle" src="../imagens/imgfabio.png" width="140" height="140" > <rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%"  dy=".3em"></text>
+						  <h3>Fábio Lins</h3>
+						  <p><i>Front-End Developer Leader</i></p> 
+								<p class="textodescricao"><strong>Técnico em Informática.	Amante de música e games.
+										Especialista em Segurança da Informação e Banco de Dados.</strong></p>
+						  
+						</div><!-- /.col-lg-4 -->
+						<div class="col-lg-4">
+						  <img class="rounded-circle" src="../imagens/imglucas.jpg" width="140" height="140" > <rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+						  <h3>Lucas Anthony</h3>
+						  <p><i>Full-Stack Developer Leader</i></p> 
+								<p class="textodescricao"><strong>Técnico em Informática.	Amante de música e games.
+										Especialista em Segurança da Informação e Banco de Dados.</strong></p>
+						  
+						</div><!-- /.col-lg-4 -->
+						<div class="col-lg-4">
+						  
+						  <img class="rounded-circle" src="../imagens/imggabriel.jpg" width="140" height="140" > <rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+						  <h3>Gabriel Brandão</h3>
+						  <p><i>Back-End Developer Leader</i></p> 
+							 	<p class="textodescricao">
+							<strong>Técnico em Informática.	Amante de música e games.
+								 Especialista em Segurança da Informação e Banco de Dados.</strong></p>
+						  
+						</div><!-- /.col-lg-4 -->
+					  </div><!-- /.row -->
+		</div><!--fim equipe-->
 
 			
 
@@ -128,28 +156,23 @@
 					  <div class="row">
 						<div class="col-md-6">
 						  
-						  <h2>Nossos Serviços</h2>
-						  <br>
-						  <h4>Desenvolvimento Web</h4>
-						  <br>
-						  <h4>Gerenciamento De Projetos</h4>
-						  <br>
-						  <h4>Fábrica De Sofware</h4>
-						  <br>
-						  <h4>Integração De Sistemas</h4>
-						  <br>
-						  <h4>Grandes Volumes De Dados</h4>
-						  <br>
-						  <h4>Analytics</h4>
-						  <br>
-						  <h4>Banco De Dados</h4>
-						  <br>
-						  <div class="bg-light rounded">
-						  <h5>Cadastre-se para contratar nossos serviços</h5>
-						  <form action="">
-						  <button class="btn btn-dark"><a href=""><strong class="botaoservicos">Cadastrar</strong></a></button>
-						 </form>
-					     </div>		
+						      <h2>Nossos Serviços</h2>
+							<ul>
+									<li class=""><h4>Desenvolvimento Web</h4></li>
+									<br>
+									<li><h4>Gerenciamento De Projetos</h4></li>
+									<br>
+									<li><h4>Fábrica De Sofware</h4></li>
+									<br>
+									<li><h4>Integração De Sistemas</h4></li>
+									<br>
+									<li><h4>Grandes Volumes De Dados</h4></li>
+									<br>
+									<li><h4>Analytics</h4></li>
+									<br>
+									<li><h4>Banco De Dados</h4></li>
+						  </ul>
+						  <a class="btn btn-dark" href="">Clique Aqui Para Contratar Nossos Serviços</a>
 						</div>
 						<div class="col-md-6">
 							<div class="row albuns">
@@ -185,7 +208,7 @@
 							  <div class="row">
 								<div class="col-md-12">
 								  
-								  <h2 class="trabalheconosco">Trabalhe Conosco</h2>
+								  <h2 id="trabalheconosco">Trabalhe Conosco</h2>
 
 								</div>
 								<form>
@@ -199,12 +222,19 @@
 												<input type="email" class="form-control" id="emailtrabalho" placeholder="Email">
 											</div>
 											<div class="form-group col-md-4">
-												<label for="curriculotrabalho">Currículo</label>
-												<input type="file" class="form-control" id="curriculotrabalho">
+												<label for="areainteresse">Área De Interesse</label>
+												<select class="form-control" name="" id="">
+													<option value="Desenvolvimento Web">Desenvolvimento Web</option>
+													<option value="Gerenciamento De Software">Gerenciamento De Software</option>
+													<option value="Suporte">Suporte</option>
+													<option value="Gerenciamento De Projetos">Gerenciamento De Projetos</option>
+													<option value="Banco De Dados">Banco De Dados</option>
+													<option value="Integração De Sistemas">Integração De Sistemas</option>
+												</select>
 											</div>
 										</div>
 										<button type="submit" class="btn btn-dark">Enviar</button>
-									  </form>
+								</form>
 						  </section><!--fim trabalhe conosco-->
 						  	
 			</div>
@@ -223,7 +253,7 @@
 					<div class="col-md-2">
 					  <h4>company</h4>
 					  <ul class="navbar-nav">
-						<li><a href="">Área Admin</a></li>
+						<li><a href="">Área Restrita</a></li>
 					  </ul>
 					</div>
 					<div class="col-md-2"></div>
@@ -243,7 +273,9 @@
 					</div>
 				  </div>
 				</div>
+				<span style="margin-left: 10px">Todos os direitos reservados</span>
 			  </footer><!--fim menu rodape-->
+			  
 				<!--Bootstrap JavaScript-->
 				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
