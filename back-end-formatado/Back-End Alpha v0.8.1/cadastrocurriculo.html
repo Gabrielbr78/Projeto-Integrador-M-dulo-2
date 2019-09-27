@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro Admin</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/estiloprojeto.css" type="text/css">
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+		
+
+</head>
+
+		<body id="home">
+			<header><!-- inicio Cabecalho -->
+				<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+				  <div class="container">
+					
+					<a href="#home" class="navbar-brand">
+					  <img src="../imagens/logo.png" width="100" class="animated fadeInDown">
+					</a>
+		  
+					
+				  </div>
+				</nav>
+			  </header><!--/fim Cabecalho -->
+			
+            <div class="caixa1"><!--imagem grande 1-->
+                
+				<div class="conteudo-titulo container-fluid row justify-content-center">
+                    
+						<form id="formulario row" class="animated fadeInLeft" action="cadastroadmin.php" method="POST">
+                            <h3 class="text-center" style="color: white;">Trabalhe conosco</h3>
+                            <div class="form-group">
+                              <label for="nome" style="color: white;">E-mail</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="e-mail" placeholder="Insira seu login">
+                            </div>
+            
+                            <div class="form-group">
+                              <label for="e-mail" style="color: white;">Senha</label>
+                              <input type="email" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Insira sua senha">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="area_interesse" style="color: white;">Área de Interesse</label>
+                                <select class="form-control" id="exampleFormControlSelect1" name="area_interesse">
+                                    <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                                    <option value="Desenvolvimento de Software">Deselvolvimento de Software</option>
+                                    <option value="Suporte">Suporte</option>
+                                    <option value="Gerenciamento de Projetos">Gerenciamento de Projetos</option>
+                                    <option value="Banco de Dados">Banco de Dados</option>
+                                    <option value="Integração de Sistemas">Integração de Sistemas</option>
+                                  </select>
+                            </div>
+                            
+                            <a class="btn btn-dark" href="loginarearestrita.html" role="button">Voltar</a>
+							<button type="reset" class="btn btn-dark" id="entrar">Limpar</button>
+                            <button type="submit" class="btn btn-dark" id="entrar">Entrar</button>
+                        </form>
+				</div>
+			</div><!--fim imagem grande 1-->
+      <footer><!--menu rodape-->
+				<div class="container">
+				  <div class="row">
+					<div class="col-md-2">
+					  <img src="../imagens/logo.png" width="142">
+					</div>
+					<div class="col-md-2">
+					  <h4>company</h4>
+					  <ul class="navbar-nav">
+						<li><a href="">Área Restrita</a></li>
+					  </ul>
+					</div>
+					<div class="col-md-2"></div>
+					
+					<div class="col-md-4">
+					  <ul>
+						<li>
+						  <a href="https://www.facebook.com"><img src="../imagens/facebook.png"></a>
+						</li>
+						<li>
+						  <a href="https://twitter.com/login?lang=pt"><img src="../imagens/twitter.png"></a>
+						</li>
+						<li>
+						  <a href="https://www.instagram.com/?hl=pt-br"><img src="../imagens/instagram.png"></a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+				<span style="margin-left: 10px">Todos os direitos reservados</span>
+			  </footer><!--fim menu rodape-->
+			
+				<!--Bootstrap JavaScript-->
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+				<!--=========================================================================================================-->
+		</body>
+</html>
