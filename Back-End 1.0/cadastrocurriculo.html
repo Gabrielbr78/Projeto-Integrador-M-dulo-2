@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trabalhe Conosco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="main" style="border:outset; display: inline-block; text-align: center">
+        <h2>Trabalhe Conosco</h2>
+        <form action="cadastrocurriculo.php" method="post" enctype="multipart/form-data">
+            
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome"><br><br>
+
+            <label for="e-mail">Email:</label>
+            <input type="email" name="e-mail"><br><br>
+
+            <label for="area_interesse">Área de Interesse:</label>
+            <select name="area_interesse">
+                <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                <option value="Desenvolvimento de Software">Deselvolvimento de Software</option>
+                <option value="Suporte">Suporte</option>
+                <option value="Gerenciamento de Projetos">Gerenciamento de Projetos</option>
+                <option value="Banco de Dados">Banco de Dados</option>
+                <option value="Integração de Sistemas">Integração de Sistemas</option>
+            </select><br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+            
+        </form>
+    </div>
+</body>
+</html>
