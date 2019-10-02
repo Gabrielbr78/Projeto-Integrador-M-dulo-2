@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contratar Serviço</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/estiloprojeto.css" type="text/css">
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  
+    <script type="text/javascript">
+        function exibeMsg(valor)
+        {
+
+            switch (valor)
+            {
+                case '1':
+                document.getElementById( 'label_registro' ).innerHTML = 'CPF:';
+                document.getElementById( 'campo_registro' ).placeholder = "000.000.000-00";
+                document.getElementById( 'identificacao' ).innerHTML = 'Nome:';
+                break;
+
+                case '2':
+                document.getElementById( 'label_registro' ).innerHTML = 'CNPJ:';
+                document.getElementById( 'campo_registro' ).placeholder = "00.000.000/0000-00";
+                document.getElementById( 'identificacao' ).innerHTML = 'Empresa:';
+                break;
+
+ 
+
+                default:
+                document.getElementById( 'label_registro' ).innerHTML = 'Selecione se você esta cadastrando sua empresa pelo CNPJ ou CPF, ela será usada para fazer login no site';
+                break;
+            }
+        }
+
+				function fMasc(objeto,mascara) {
+				obj=objeto
+				masc=mascara
+				setTimeout("fMascEx()",1)
+				}
+				function fMascEx() {
+					obj.value=masc(obj.value)
+				}
+				function mTel(tel) {
+					tel=tel.replace(/\D/g,"")
+					tel=tel.replace(/^(\d)/,"($1")
+					tel=tel.replace(/(.{3})(\d)/,"$1)$2")
+					if(tel.length == 9) {
+						tel=tel.replace(/(.{1})$/,"-$1")
+					} else if (tel.length == 10) {
+						tel=tel.replace(/(.{2})$/,"-$1")
+					} else if (tel.length == 11) {
+						tel=tel.replace(/(.{3})$/,"-$1")
+					} else if (tel.length == 12) {
+						tel=tel.replace(/(.{4})$/,"-$1")
+					} else if (tel.length > 12) {
+						tel=tel.replace(/(.{4})$/,"-$1")
+					}
+					return tel;
+				}
+				function mCNPJ(cnpj){
+					cnpj=cnpj.replace(/\D/g,"")
+					cnpj=cnpj.replace(/^(\d{2})(\d)/,"$1.$2")
+					cnpj=cnpj.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")
+					cnpj=cnpj.replace(/\.(\d{3})(\d)/,".$1/$2")
+					cnpj=cnpj.replace(/(\d{4})(\d)/,"$1-$2")
+					return cnpj
+				}
+				function mCPF(cpf){
+					cpf=cpf.replace(/\D/g,"")
+					cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+					cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+					cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+					return cpf
+				}
+				function mCEP(cep){
+					cep=cep.replace(/\D/g,"")
+					cep=cep.replace(/^(\d{2})(\d)/,"$1.$2")
+					cep=cep.replace(/\.(\d{3})(\d)/,".$1-$2")
+					return cep
+				}
+				function mNum(num){
+					num=num.replace(/\D/g,"")
+					return num
+				}
+				function mascaraData( campo, e ){
+				var kC = (document.all) ? event.keyCode : e.keyCode;
+				var data = campo.value;
+			
+				if( kC!=8 && kC!=46 )
+				{
+					if( data.length==2 )
+					{
+						campo.value = data += '/';
+					}
+					else if( data.length==5 )
+					{
+						campo.value = data += '/';
+					}
+					else
+						campo.value = data;
+				}
+			}
+    </script>
+</head>
+
+		<body id="home" class="">
+			<header><!-- inicio Cabecalho -->
+				<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+				  <div class="container">
+					
+					<a href="#home" class="navbar-brand">
+					  <img src="../imagens/logo.png" width="100" class="animated fadeInDown">
+					</a>
+		  
+					
+				  </div>
+				</nav>
+			  </header><!--/fim Cabecalho -->
+			
+            <div class="caixa1 "><!--imagem grande 1-->
+                
+				<div class="conteudo-titulo ">
+                    <div class="container ">
+                        <div class="row">
+                            <header class="col-12 animated fadeInLeft" style="margin-top: -220px">
+                                <h3 class="text-center " style="color: white;">Contratar Serviço</h3>
+                            </header>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <form class="animated fadeInLeft col-md-5 offset-md-7" style="margin-top: -140px;" action="contratar_servico.php" method="POST">
+                                        <div class="form-group tipopessoa">
+                                            <label for="pessoafisica" style="color: white;">Pessoa Física</label>
+                                            <input type="radio" class="form-control" id="pessoafisica" name="tipopessoa" value="1" onchange="exibeMsg(this.value);">
+                                            
+                                          </div>
+                          
+                                          <div class="form-group tipopessoa">
+                                            <label for="pessoajuridica" style="color: white;">Pessoa Jurídica</label>
+                                            <input type="radio" class="form-control" id="pessoajuridica" name="tipopessoa" value="2" onchange="exibeMsg(this.value);">
+                                          </div>
+              
+                                          <div class="form-group">
+                                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="identificacao" placeholder="Insira seu nome">
+                                          </div>
+              
+                                          <div class="form-group">
+                                              <input type="text" class="form-control" id="campo_registro" aria-describedby="emailHelp" name="registro" placeholder="Insira seu CPF/CNPJ">
+                                                                      </div>
+                                        <a class="btn btn-dark" href="menu_cliente.html" role="button">Voltar</a>
+                                  
+                                  
+                            </div>
+                            <div class="col-6">
+                                    <div class="animated fadeInLeft col-md-5" style="margin-top: -140px;">
+                                        
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" aria-describedby="emailHelp" name="telefone" placeholder="Telefone de contato" maxlength="14" onkeydown="javascript: fMasc( this, mTel );">
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" aria-describedby="emailHelp" name="nome_contato" placeholder="Nome do contato" required="true">
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" aria-describedby="emailHelp" name="email" placeholder="Email de contato" required="true">
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <select class="form-control" id="exampleFormControlSelect1" name="servico" required="true">
+                                                <option value="">Tipo de serviço</option>
+                                                <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                                                <option value="Gerenciamento de Projeto">Gerenciamento de Projeto</option>
+                                                <option value="Desenvolvimento de Software">Desenvolvimento de Software</option>
+                                                <option value="Integração de Sistemas">Integração de Sistemas</option>
+                                                <option value="Banco de Dados">Banco de Dados</option>
+                                                </select>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" name="descricao" cols="30" rows="3" style="resize: none;" placeholder="Descrição do Serviço"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-dark" id="entrar">Contratar</button>
+                                    </form>
+                                    </div>
+                                                                      
+                            </div>
+                        </div>
+                    </div>  
+                    
+				</div>
+            </div><!--fim imagem grande 1-->
+            
+            <footer><!--menu rodape-->
+              <div class="container">
+                <div class="row">
+                <div class="col-md-2">
+                  <img src="../imagens/logo.png" width="142">
+                </div>
+                <div class="col-md-2">
+                  <h4>company</h4>
+                  <ul class="navbar-nav">
+                  <li><a href="">Área Admin</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2"></div>
+                
+                <div class="col-md-4">
+                  <ul>
+                  <li>
+                    <a href="https://www.facebook.com"><img src="../imagens/facebook.png"></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/login?lang=pt"><img src="../imagens/twitter.png"></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/?hl=pt-br"><img src="../imagens/instagram.png"></a>
+                  </li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+              </footer><!--fim menu rodape-->   
+
+			
+				<!--Bootstrap JavaScript-->
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+				<!--=========================================================================================================-->
+		</body>
+</html>
